@@ -7,7 +7,9 @@ int cash = 100;
 void play(int bet) 
 {
     char *c = (char*)malloc(10000 * sizeof(char));
-    *c = 'J'; *(c + 1) = 'Q'; *(c + 2) = 'K';
+    *c = 'J'; 
+    *(c + 1) = 'Q'; 
+    *(c + 2) = 'K';
 
     printf("Suffling...\n");
 
@@ -43,13 +45,18 @@ int main()
 
     printf("Welcome to the Virtual Casino\n");
     printf("Total Cash = $%d\n", cash);
-
+    
     while(cash > 0)
     {
         printf("What's your bet? $");
         scanf("%d", &bet);
-        if (bet == 0 || bet > cash) break;
+        if (bet == 0 || bet > cash)
+        {
+            break;
+        }
         play(bet);
         printf("\n***************************************\n");
     }
+
+    return 0;
 }
