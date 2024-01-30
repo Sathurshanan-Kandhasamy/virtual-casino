@@ -29,11 +29,11 @@ void play(int bet)
     if (c[playerGuess - 1] == 'Q')
     {
         cash += 3 * bet;
-        printf("You Win! Result = \"%c%c%c\" Total Cash = %d\n", c[0], c[1], c[2], cash);
+        printf("You Win! Result = \"%c%c%c\" Total Cash = $%d\n", c[0], c[1], c[2], cash);
     } else
     {
         cash -= bet;
-        printf("You Lose! Result = \"%c%c%c\" Total Cash = %d\n", c[0], c[1], c[2], cash);
+        printf("You Lose! Result = \"%c%c%c\" Total Cash = $%d\n", c[0], c[1], c[2], cash);
     }
 
     free(c);
@@ -48,7 +48,7 @@ int main()
     
     while(cash > 0)
     {
-        printf("What's your bet? $");
+        printf("What's your bet? $ ");
         scanf("%d", &bet);
         if (bet == 0 || bet > cash)
         {
